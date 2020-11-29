@@ -6,7 +6,9 @@ const authController = require('../controllers/authController');
 const authControllerOb = new authController(jwt, config);
 
 const photoController = require('../controllers/photoController');
-const photoControllerOb = new photoController(fetch);
+const photoService = require('../services/photoService');
+const photoServiceOb = new photoService(fetch);
+const photoControllerOb = new photoController(photoServiceOb);
 
 module.exports = {
     jwt, config, fetch, authControllerOb, photoControllerOb
