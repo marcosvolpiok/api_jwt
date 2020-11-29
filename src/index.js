@@ -24,7 +24,7 @@ app.use('/', indexRoutes);
 
 // error handler
 app.use(function(err, req, res, next){
-    res.status(400).json({error: err, message: err.message});
+    res.status(400).json({message: err, message: err.message});
 });
 
 // starting the server
