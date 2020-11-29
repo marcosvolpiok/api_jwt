@@ -3,7 +3,10 @@ const config = require('../config/config');
 const fetch = require('node-fetch');
 
 const authController = require('../controllers/authController');
-const authControllerOb = new authController(jwt, config);
+const authService = require('../services/authService');
+const authServiceOb = new authService(jwt, config);
+const authControllerOb = new authController(authServiceOb);
+
 
 const photoController = require('../controllers/photoController');
 const photoService = require('../services/photoService');
