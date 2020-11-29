@@ -17,13 +17,13 @@ class authService {
             
             return {
                 status: 200,
-                mensaje: 'Authentication successful',
+                message: 'Authentication successful',
                 token: token
             };
         }else{
             return {
                 status: 403,
-                mensaje: 'Authentication failed'
+                message: 'Authentication failed'
             };
         }
     }
