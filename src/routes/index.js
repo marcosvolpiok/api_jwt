@@ -2,21 +2,11 @@ const router = require('express').Router();
 const Joi = require('joi');
 const jwt = require('jsonwebtoken');
 const config = require('../config/config');
-/*
+
 const {
-    serverRepositoryOb,
-    serverControllerOb,
-    messageControllerOb
+    authControllerOb,
+    photoControllerOb
 } = require('../dependencies/');
-*/
-
-const authController = require('../controllers/authController');
-const authControllerOb = new authController();
-
-const photoController = require('../controllers/photoController');
-const photoControllerOb = new photoController();
-
-
 
 
 router.use((req, res, next) => {

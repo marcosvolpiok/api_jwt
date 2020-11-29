@@ -1,8 +1,6 @@
 class photoController{
-    constructor() {
-        this.jwt=require('jsonwebtoken');
-        this.config = require('../config/config');
-        this.fetch = require('node-fetch');
+    constructor(fetch) {
+        this.fetch = fetch;
       }
 
    list = async (req, res) => { 

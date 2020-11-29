@@ -1,7 +1,7 @@
 class authController{
-    constructor() {
-        this.jwt=require('jsonwebtoken');
-        this.config = require('../config/config');
+    constructor(jwt, config) {
+       this.jwt=jwt;
+       this.config=config;
       }
 
    login = (req, res) => { 
