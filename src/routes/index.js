@@ -13,6 +13,11 @@ const {
 const authController = require('../controllers/authController');
 const authControllerOb = new authController();
 
+const photoController = require('../controllers/photoController');
+const photoControllerOb = new photoController();
+
+
+
 
 router.use((req, res, next) => {
     const token = req.headers['access-token'];
@@ -38,10 +43,12 @@ router.use((req, res, next) => {
             }
     }
     
- });
+});
 
 
 router.post('/login/', login, authControllerOb.login);
+router.get('/photos/', photoControllerOb.list);
+
 
 
 
