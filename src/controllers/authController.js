@@ -4,7 +4,7 @@ class authController{
         this.config = require('../config/config');
       }
 
-   login = async (req, res) => { 
+   login = (req, res) => { 
     try{
         if(req.body.user=='demo' && req.body.pwd=='demo'){
             const payload = {
