@@ -27,8 +27,8 @@ router.use((req, res, next) => {
                 }
             });
             } else {
-                res.send({ 
-                    mensaje: 'Token no proveída.' 
+                res.status(403).send({ 
+                    mensaje: 'No such token' 
                 });
             }
     }
