@@ -19,7 +19,7 @@ router.use((req, res, next) => {
         if (token) {
             jwt.verify(token, config.key, (err, decoded) => {      
                 if (err) {
-                    return res.status(403).send({ mensaje: 'Token inválida' });    
+                    return res.status(403).send({ mensaje: 'Invalid token' });    
                 } else {
                     req.decoded = decoded; 
                     console.log('Decoded: ', decoded);   
