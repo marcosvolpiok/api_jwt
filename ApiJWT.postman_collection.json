@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "573f0ebd-15bf-457b-91de-b0ce0828bc89",
+		"name": "ApiJWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwidXNlciI6InRlc3QiLCJpYXQiOjE2MDY1ODMzNTgsImV4cCI6MTYwNjU4NDc5OH0.18Ce-lh9XudcsunIyfshsq8Np-yuNOPey7GZ3-zlD2Y",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user\": \"demo\", \"pwd\": \"demo\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwidXNlciI6InRlc3QiLCJpYXQiOjE2MDY2NjU5OTUsImV4cCI6MTYwNjY2NzQzNX0.jIxcK72WR1PN2hH49mLcxkbiZtbul58hfxPUeCTBoKM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/photos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"photos"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
